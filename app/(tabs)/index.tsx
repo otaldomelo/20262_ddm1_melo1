@@ -19,34 +19,18 @@ const batmanIdentities = [
   },
 ];
 
-const robins = [
-  {
-    name: 'Dick Grayson',
-    role: 'Primeiro Robin',
-    image: require('@/assets/images/nightwing.jpg'),
-  },
-  {
-    name: 'Jason Todd',
-    role: 'Segundo Robin',
-    image: require('@/assets/images/redhood.jpg'),
-  },
-  {
-    name: 'Tim Drake',
-    role: 'Terceiro Robin',
-    image: require('@/assets/images/redrobin.jpg'),
-  },
-  {
-    name: 'Damian Wayne',
-    role: 'Quarto Robin',
-    image: require('@/assets/images/robin.jpg'),
-  },
-];
-
 export default function HomeScreen() {
   return (
-    <ScrollView style={styles.container}>
-      {/* CABEÇALHO */}
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.contentContainer}
+    >
+
+      {/* =========================
+          CABEÇALHO
+      ========================= */}
       <View style={styles.headerContainer}>
+
         <Image
           source={require('@/assets/images/batman_header.jpg')}
           style={styles.batmanHeader}
@@ -60,29 +44,44 @@ export default function HomeScreen() {
             BAT-SIGNAL
           </ThemedText>
         </View>
+
       </View>
 
-      {/* TÍTULO */}
+
+      {/* =========================
+          TÍTULO
+      ========================= */}
       <ThemedView style={styles.titleContainer}>
-        <View>
+
+        <View style={styles.titleContent}>
+
           <ThemedText style={styles.kicker}>
             BEM VINDO A GOTHAM
           </ThemedText>
 
-          <ThemedText type="title" style={styles.title}>
+          <ThemedText
+            type="title"
+            style={styles.title}
+          >
             BATMAN
           </ThemedText>
 
           <ThemedText style={styles.subtitle}>
             O Cavaleiro das Trevas
           </ThemedText>
+
         </View>
 
         <HelloWave />
+
       </ThemedView>
 
-      {/* BRUCE WAYNE / BATMAN */}
+
+      {/* =========================
+          BRUCE WAYNE / BATMAN
+      ========================= */}
       <ThemedView style={styles.section}>
+
         <ThemedText style={styles.sectionTitle}>
           POR TRÁS DA MÁSCARA
         </ThemedText>
@@ -92,11 +91,14 @@ export default function HomeScreen() {
         </ThemedText>
 
         <View style={styles.identityGrid}>
+
           {batmanIdentities.map((identity) => (
+
             <View
               key={identity.name}
               style={styles.identityCard}
             >
+
               <Image
                 source={identity.image}
                 style={styles.identityImage}
@@ -106,6 +108,7 @@ export default function HomeScreen() {
               <View style={styles.identityOverlay} />
 
               <View style={styles.identityInfo}>
+
                 <ThemedText style={styles.identityName}>
                   {identity.name}
                 </ThemedText>
@@ -113,33 +116,49 @@ export default function HomeScreen() {
                 <ThemedText style={styles.identityRole}>
                   {identity.role}
                 </ThemedText>
+
               </View>
+
             </View>
+
           ))}
+
         </View>
+
       </ThemedView>
 
-      {/* INTRO */}
+
+      {/* =========================
+          INTRODUÇÃO
+      ========================= */}
       <ThemedView style={styles.card}>
+
         <ThemedText style={styles.cardTitle}>
           🦇 O CAVALEIRO DE GOTHAM
         </ThemedText>
 
         <ThemedText style={styles.cardText}>
           Batman é o lendário protetor de Gotham City.
-          Por trás da máscara está Bruce Wayne,
-          um bilionário que dedicou sua vida a combater o crime.
+          Por trás da máscara está Bruce Wayne, um
+          bilionário que dedicou sua vida a combater o crime.
         </ThemedText>
+
       </ThemedView>
 
-      {/* FATOS */}
+
+      {/* =========================
+          BATMAN FILES
+      ========================= */}
       <ThemedView style={styles.section}>
+
         <ThemedText style={styles.sectionTitle}>
           BATMAN FILES
         </ThemedText>
 
         <View style={styles.factGrid}>
+
           <View style={styles.factCard}>
+
             <ThemedText style={styles.factNumber}>
               01
             </ThemedText>
@@ -151,9 +170,12 @@ export default function HomeScreen() {
             <ThemedText style={styles.factText}>
               Bruce Wayne
             </ThemedText>
+
           </View>
 
+
           <View style={styles.factCard}>
+
             <ThemedText style={styles.factNumber}>
               02
             </ThemedText>
@@ -165,9 +187,12 @@ export default function HomeScreen() {
             <ThemedText style={styles.factText}>
               Gotham City
             </ThemedText>
+
           </View>
 
+
           <View style={styles.factCard}>
+
             <ThemedText style={styles.factNumber}>
               03
             </ThemedText>
@@ -179,9 +204,12 @@ export default function HomeScreen() {
             <ThemedText style={styles.factText}>
               O Batman
             </ThemedText>
+
           </View>
 
+
           <View style={styles.factCard}>
+
             <ThemedText style={styles.factNumber}>
               04
             </ThemedText>
@@ -193,12 +221,19 @@ export default function HomeScreen() {
             <ThemedText style={styles.factText}>
               Justiça
             </ThemedText>
+
           </View>
+
         </View>
+
       </ThemedView>
 
-      {/* GOTHAM */}
+
+      {/* =========================
+          GOTHAM
+      ========================= */}
       <ThemedView style={styles.gothamCard}>
+
         <ThemedText style={styles.gothamLabel}>
           LOCALIZAÇÃO
         </ThemedText>
@@ -213,62 +248,221 @@ export default function HomeScreen() {
           das Trevas.
         </ThemedText>
 
-        <Link href="/modal" asChild>
+
+        <Link
+          href="/modal"
+          asChild
+        >
+
           <View style={styles.button}>
+
             <ThemedText style={styles.buttonText}>
-              Conheça Gotham →
+              CONHEÇA GOTHAM →
             </ThemedText>
+
           </View>
+
         </Link>
+
       </ThemedView>
 
-      {/* ROBINS */}
+
+      {/* =========================
+          ROBINS
+      ========================= */}
       <ThemedView style={styles.section}>
+
         <ThemedText style={styles.sectionTitle}>
           OS ROBINS
         </ThemedText>
 
         <ThemedText style={styles.sectionDescription}>
-          Os quatro principais personagens que carregaram
+          Conheça os principais personagens que carregaram
           o símbolo do Robin ao lado do Batman.
         </ThemedText>
 
-        <View style={styles.rid}>
-          {robins.map((robin) => (
-            <View
-              key={robin.name}
-              style={styles.allyCard}
-            >
-              <Image
-                source={robin.image}
-                style={styles.allyImage}
-                contentFit="cover"
-              />
 
-              <View style={styles.allyOverlay} />
+        <View style={styles.robinsContainer}>
 
-              <View style={styles.allyInfo}>
-                <ThemedText style={styles.allyName}>
-                  {robin.name}
-                </ThemedText>
+          {/* =====================
+              DICK GRAYSON
+          ===================== */}
+          <View style={styles.robinCard}>
 
-                <ThemedText style={styles.allyRole}>
-                  {robin.role}
-                </ThemedText>
-              </View>
+            <Image
+              source={require('@/assets/images/nightwing.jpg')}
+              style={styles.robinImage}
+              contentFit="cover"
+            />
+
+            <View style={styles.robinInfo}>
+
+              <ThemedText style={styles.robinName}>
+                Dick Grayson
+              </ThemedText>
+
+              <ThemedText style={styles.robinRole}>
+                Primeiro Robin
+              </ThemedText>
+
+
+              <Link
+                href="/dickgrayson"
+                asChild
+              >
+
+                <View style={styles.robinButton}>
+
+                  <ThemedText style={styles.robinButtonText}>
+                    CONHECER DICK →
+                  </ThemedText>
+
+                </View>
+
+              </Link>
+
             </View>
-          ))}
+
+          </View>
+
+
+          {/* =====================
+              JASON TODD
+          ===================== */}
+          <View style={styles.robinCard}>
+
+            <Image
+              source={require('@/assets/images/redhood.jpg')}
+              style={styles.robinImage}
+              contentFit="cover"
+            />
+
+            <View style={styles.robinInfo}>
+
+              <ThemedText style={styles.robinName}>
+                Jason Todd
+              </ThemedText>
+
+              <ThemedText style={styles.robinRole}>
+                Segundo Robin
+              </ThemedText>
+
+
+              <Link
+                href="/jasontodd"
+                asChild
+              >
+
+                <View style={styles.robinButton}>
+
+                  <ThemedText style={styles.robinButtonText}>
+                    CONHECER JASON →
+                  </ThemedText>
+
+                </View>
+
+              </Link>
+
+            </View>
+
+          </View>
+
+
+          {/* =====================
+              TIM DRAKE
+          ===================== */}
+          <View style={styles.robinCard}>
+
+            <Image
+              source={require('@/assets/images/redrobin.jpg')}
+              style={styles.robinImage}
+              contentFit="cover"
+            />
+
+            <View style={styles.robinInfo}>
+
+              <ThemedText style={styles.robinName}>
+                Tim Drake
+              </ThemedText>
+
+              <ThemedText style={styles.robinRole}>
+                Terceiro Robin
+              </ThemedText>
+
+
+              <Link
+                href="/timdrake"
+                asChild
+              >
+
+                <View style={styles.robinButton}>
+
+                  <ThemedText style={styles.robinButtonText}>
+                    CONHECER TIM →
+                  </ThemedText>
+
+                </View>
+
+              </Link>
+
+            </View>
+
+          </View>
+
+
+          {/* =====================
+              DAMIAN WAYNE
+          ===================== */}
+          <View style={styles.robinCard}>
+
+            <Image
+              source={require('@/assets/images/robin.jpg')}
+              style={styles.robinImage}
+              contentFit="cover"
+            />
+
+            <View style={styles.robinInfo}>
+
+              <ThemedText style={styles.robinName}>
+                Damian Wayne
+              </ThemedText>
+
+              <ThemedText style={styles.robinRole}>
+                Quarto Robin
+              </ThemedText>
+
+            </View>
+
+          </View>
+
         </View>
+
       </ThemedView>
+
     </ScrollView>
   );
 }
 
+
 const styles = StyleSheet.create({
+
+  /* =========================
+     CONTAINER
+  ========================= */
+
   container: {
     flex: 1,
     backgroundColor: '#050505',
   },
+
+  contentContainer: {
+    paddingBottom: 40,
+  },
+
+
+  /* =========================
+     HEADER
+  ========================= */
 
   headerContainer: {
     width: '100%',
@@ -303,12 +497,21 @@ const styles = StyleSheet.create({
     letterSpacing: 3,
   },
 
+
+  /* =========================
+     TÍTULO
+  ========================= */
+
   titleContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: 'transparent',
     padding: 20,
+  },
+
+  titleContent: {
+    flex: 1,
   },
 
   kicker: {
@@ -335,10 +538,14 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 
+
+  /* =========================
+     SEÇÕES
+  ========================= */
+
   section: {
     backgroundColor: 'transparent',
     padding: 20,
-    gap: 14,
   },
 
   sectionTitle: {
@@ -346,13 +553,20 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: '900',
     letterSpacing: 2,
+    marginBottom: 8,
   },
 
   sectionDescription: {
     color: '#777777',
     fontSize: 14,
     lineHeight: 20,
+    marginBottom: 15,
   },
+
+
+  /* =========================
+     IDENTIDADES
+  ========================= */
 
   identityGrid: {
     flexDirection: 'row',
@@ -405,6 +619,11 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 
+
+  /* =========================
+     CARD
+  ========================= */
+
   card: {
     backgroundColor: '#111111',
     borderWidth: 1,
@@ -429,6 +648,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 25,
   },
+
+
+  /* =========================
+     FATOS
+  ========================= */
 
   factGrid: {
     flexDirection: 'row',
@@ -466,6 +690,11 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
 
+
+  /* =========================
+     GOTHAM
+  ========================= */
+
   gothamCard: {
     backgroundColor: '#161616',
     borderRadius: 4,
@@ -491,11 +720,17 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
 
+
+  /* =========================
+     BOTÃO GOTHAM
+  ========================= */
+
   button: {
     marginTop: 15,
     backgroundColor: '#F5C518',
     paddingVertical: 14,
     alignItems: 'center',
+    justifyContent: 'center',
   },
 
   buttonText: {
@@ -505,56 +740,63 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
 
-  rid: {
+
+  /* =========================
+     ROBINS
+  ========================= */
+
+  robinsContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    rowGap: 14,
+    gap: 12,
   },
 
-  allyCard: {
+  robinCard: {
     width: '48%',
-    height: 210,
     backgroundColor: '#111111',
     borderWidth: 1,
     borderColor: '#292929',
     borderRadius: 5,
     overflow: 'hidden',
-    position: 'relative',
   },
 
-  allyImage: {
+  robinImage: {
     width: '100%',
-    height: '100%',
-    position: 'absolute',
+    height: 180,
   },
 
-  allyOverlay: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(0, 0, 0, 0.35)',
-  },
-
-  allyInfo: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
+  robinInfo: {
     padding: 12,
-    backgroundColor: 'rgba(0, 0, 0, 0.75)',
-    borderTopWidth: 2,
-    borderTopColor: '#F5C518',
   },
 
-  allyName: {
+  robinName: {
     color: '#FFFFFF',
-    fontSize: 15,
+    fontSize: 16,
     fontWeight: '900',
   },
 
-  allyRole: {
+  robinRole: {
     color: '#F5C518',
     fontSize: 11,
     fontWeight: '700',
-    marginTop: 3,
+    marginTop: 4,
   },
+
+  robinButton: {
+    marginTop: 12,
+    backgroundColor: '#F5C518',
+    paddingVertical: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+  },
+
+  robinButtonText: {
+    color: '#050505',
+    fontSize: 11,
+    fontWeight: '900',
+    letterSpacing: 1,
+  },
+
 });
