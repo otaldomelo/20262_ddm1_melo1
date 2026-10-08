@@ -5,27 +5,28 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 
-const timIdentities = [
+const damianIdentities = [
   {
-    name: 'Tim Drake',
-    role: 'O Terceiro Robin',
-    image: require('@/assets/images/timdrake.jpg'),
+    name: 'Damian Wayne',
+    role: 'O Quarto Robin',
+    image: require('@/assets/images/damianwayne.jpg'),
   },
   {
     name: 'Robin',
-    role: 'O Detetive da Bat-Família',
-    image: require('@/assets/images/redrobin.jpg'),
+    role: 'O Herdeiro do Morcego',
+    image: require('@/assets/images/robin.jpg'),
   },
 ];
 
-export default function TimDrakeScreen() {
+export default function DamianWayneScreen() {
   return (
     <ScrollView style={styles.container}>
 
       {/* CABEÇALHO */}
       <View style={styles.headerContainer}>
+
         <Image
-          source={require('@/assets/images/redrobin_header.jpg')}
+          source={require('@/assets/images/robin_header.jpg')}
           style={styles.headerImage}
           contentFit="cover"
         />
@@ -37,24 +38,34 @@ export default function TimDrakeScreen() {
             ROBIN
           </ThemedText>
         </View>
+
       </View>
+
 
       {/* TÍTULO */}
       <ThemedView style={styles.titleContainer}>
+
         <View>
+
           <ThemedText style={styles.kicker}>
-            O TERCEIRO ROBIN
+            O QUARTO ROBIN
           </ThemedText>
 
-          <ThemedText type="title" style={styles.title}>
-            TIM DRAKE
+          <ThemedText
+            type="title"
+            style={styles.title}
+          >
+            DAMIAN WAYNE
           </ThemedText>
 
           <ThemedText style={styles.subtitle}>
-            O Detetive da Bat-Família
+            O Herdeiro do Morcego
           </ThemedText>
+
         </View>
+
       </ThemedView>
+
 
       {/* IDENTIDADES */}
       <ThemedView style={styles.section}>
@@ -64,16 +75,19 @@ export default function TimDrakeScreen() {
         </ThemedText>
 
         <ThemedText style={styles.sectionDescription}>
-          Um jovem prodígio que descobriu a identidade do
-          Batman e provou ser digno do manto de Robin.
+          Filho de Bruce Wayne e criado entre assassinos,
+          Damian precisou aprender a ser Robin e herói.
         </ThemedText>
 
         <View style={styles.identityGrid}>
-          {timIdentities.map((identity) => (
+
+          {damianIdentities.map((identity) => (
+
             <View
               key={identity.name}
               style={styles.identityCard}
             >
+
               <Image
                 source={identity.image}
                 style={styles.identityImage}
@@ -83,6 +97,7 @@ export default function TimDrakeScreen() {
               <View style={styles.identityOverlay} />
 
               <View style={styles.identityInfo}>
+
                 <ThemedText style={styles.identityName}>
                   {identity.name}
                 </ThemedText>
@@ -90,40 +105,48 @@ export default function TimDrakeScreen() {
                 <ThemedText style={styles.identityRole}>
                   {identity.role}
                 </ThemedText>
+
               </View>
+
             </View>
+
           ))}
+
         </View>
+
       </ThemedView>
+
 
       {/* INTRODUÇÃO */}
       <ThemedView style={styles.card}>
 
         <ThemedText style={styles.cardTitle}>
-          🐦 O DETETIVE
+          O HERDEIRO DO MORCEGO
         </ThemedText>
 
         <ThemedText style={styles.cardText}>
-          Tim Drake é um dos membros mais inteligentes da
-          Bat-Família. Diferente de outros Robins, ele
-          percebeu por conta própria que Bruce Wayne era
-          o Batman. Convencido de que o Cavaleiro das
-          Trevas precisava de um parceiro, Tim assumiu
-          o manto de Robin.
+          Damian Wayne é filho de Bruce Wayne e Talia
+          al Ghul. Criado pela Liga dos Assassinos, ele
+          recebeu treinamento desde muito jovem para se
+          tornar um guerreiro excepcional. Ao conhecer
+          seu pai, passou a assumir o manto de Robin e
+          iniciou sua difícil jornada para se tornar um herói.
         </ThemedText>
 
       </ThemedView>
 
-      {/* TIM DRAKE FILES */}
+
+      {/* DAMIAN WAYNE FILES */}
       <ThemedView style={styles.section}>
 
         <ThemedText style={styles.sectionTitle}>
-          TIM DRAKE FILES
+          DAMIAN WAYNE FILES
         </ThemedText>
 
         <View style={styles.factGrid}>
 
           <View style={styles.factCard}>
+
             <ThemedText style={styles.factNumber}>
               01
             </ThemedText>
@@ -133,11 +156,14 @@ export default function TimDrakeScreen() {
             </ThemedText>
 
             <ThemedText style={styles.factText}>
-              Tim Drake
+              Damian Wayne
             </ThemedText>
+
           </View>
 
+
           <View style={styles.factCard}>
+
             <ThemedText style={styles.factNumber}>
               02
             </ThemedText>
@@ -149,9 +175,12 @@ export default function TimDrakeScreen() {
             <ThemedText style={styles.factText}>
               Robin
             </ThemedText>
+
           </View>
 
+
           <View style={styles.factCard}>
+
             <ThemedText style={styles.factNumber}>
               03
             </ThemedText>
@@ -161,26 +190,32 @@ export default function TimDrakeScreen() {
             </ThemedText>
 
             <ThemedText style={styles.factText}>
-              Terceiro Robin
+              Quarto Robin
             </ThemedText>
+
           </View>
 
+
           <View style={styles.factCard}>
+
             <ThemedText style={styles.factNumber}>
               04
             </ThemedText>
 
             <ThemedText style={styles.factTitle}>
-              MENTOR
+              PAI
             </ThemedText>
 
             <ThemedText style={styles.factText}>
-              Batman
+              Bruce Wayne
             </ThemedText>
+
           </View>
 
         </View>
+
       </ThemedView>
+
 
       {/* GOTHAM */}
       <ThemedView style={styles.gothamCard}>
@@ -194,49 +229,94 @@ export default function TimDrakeScreen() {
         </ThemedText>
 
         <ThemedText style={styles.cardText}>
-          Gotham é o principal território da Bat-Família.
-          Foi nas ruas da cidade que Tim começou sua
-          jornada como Robin e passou a lutar ao lado
-          do Batman contra alguns dos maiores criminosos
-          do universo DC.
+          Gotham se tornou o principal território de Damian
+          após sua entrada na Bat-Família. Ao lado de Batman
+          e dos outros Robins, ele aprendeu que proteger a
+          cidade exige mais do que força: exige disciplina,
+          responsabilidade e controle.
         </ThemedText>
 
         <Link href="/modal" asChild>
+
           <View style={styles.button}>
+
             <ThemedText style={styles.buttonText}>
               CONHEÇA GOTHAM →
             </ThemedText>
+
           </View>
+
         </Link>
 
       </ThemedView>
+
 
       {/* LEGADO */}
       <ThemedView style={styles.section}>
 
         <ThemedText style={styles.sectionTitle}>
-          UM LEGADO INTELIGENTE
+          UM LEGADO EM CONSTRUÇÃO
         </ThemedText>
 
         <ThemedText style={styles.sectionDescription}>
-          Tim Drake representa uma nova geração de heróis,
-          usando inteligência, estratégia e determinação
-          para continuar o legado do Batman.
+          Damian representa a nova geração da Bat-Família
+          e o desafio de transformar um passado sombrio
+          em um novo futuro.
         </ThemedText>
 
         <View style={styles.legacyCard}>
 
           <ThemedText style={styles.legacyTitle}>
-            O ROBIN DETETIVE
+            DE ASSASSINO A ROBIN
           </ThemedText>
 
           <ThemedText style={styles.legacyText}>
-            Tim não possui superpoderes. Sua maior arma é
-            sua inteligência. Como Robin, ele se destacou
-            por sua capacidade de investigação, estratégia
-            e raciocínio, tornando-se um dos maiores
-            detetives da Bat-Família.
+            Damian começou sua vida sendo treinado para
+            matar e conquistar. Sob a influência de Bruce
+            Wayne e da Bat-Família, começou a compreender
+            o verdadeiro significado de ser um herói.
+            Sua jornada é marcada pelo conflito entre sua
+            natureza agressiva e o código de Batman.
           </ThemedText>
+
+        </View>
+
+      </ThemedView>
+
+
+      {/* RELAÇÃO COM BATMAN */}
+      <ThemedView style={styles.section}>
+
+        <ThemedText style={styles.sectionTitle}>
+          O FILHO DO BATMAN
+        </ThemedText>
+
+        <ThemedText style={styles.sectionDescription}>
+          Uma relação marcada por conflitos, respeito
+          e uma constante tentativa de provar seu valor.
+        </ThemedText>
+
+        <View style={styles.relationCard}>
+
+          <View style={styles.relationNumber}>
+            <ThemedText style={styles.relationNumberText}>
+              01
+            </ThemedText>
+          </View>
+
+          <View style={styles.relationContent}>
+
+            <ThemedText style={styles.relationTitle}>
+              BRUCE WAYNE
+            </ThemedText>
+
+            <ThemedText style={styles.relationText}>
+              Para Damian, Bruce não é apenas o Batman.
+              Ele é seu pai e a pessoa que representa
+              o maior desafio de sua vida.
+            </ThemedText>
+
+          </View>
 
         </View>
 
@@ -248,12 +328,19 @@ export default function TimDrakeScreen() {
 
 const styles = StyleSheet.create({
 
+  /* =========================
+     CONTAINER
+  ========================= */
+
   container: {
     flex: 1,
     backgroundColor: '#080808',
   },
 
-  /* HEADER */
+
+  /* =========================
+     HEADER
+  ========================= */
 
   headerContainer: {
     width: '100%',
@@ -269,7 +356,7 @@ const styles = StyleSheet.create({
 
   headerOverlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(0, 0, 0, 0.55)',
+    backgroundColor: 'rgba(0, 0, 0, 0.58)',
   },
 
   headerLabel: {
@@ -277,18 +364,21 @@ const styles = StyleSheet.create({
     bottom: 25,
     left: 25,
     borderLeftWidth: 3,
-    borderLeftColor: '#3A9D68',
+    borderLeftColor: '#8FAF45',
     paddingLeft: 10,
   },
 
   headerLabelText: {
-    color: '#3A9D68',
+    color: '#8FAF45',
     fontSize: 11,
     fontWeight: '800',
     letterSpacing: 3,
   },
 
-  /* TITLE */
+
+  /* =========================
+     TÍTULO
+  ========================= */
 
   titleContainer: {
     backgroundColor: 'transparent',
@@ -298,7 +388,7 @@ const styles = StyleSheet.create({
   },
 
   kicker: {
-    color: '#3A9D68',
+    color: '#8FAF45',
     fontSize: 11,
     fontWeight: '800',
     letterSpacing: 2,
@@ -307,8 +397,8 @@ const styles = StyleSheet.create({
 
   title: {
     color: '#FFFFFF',
-    fontSize: 36,
-    lineHeight: 42,
+    fontSize: 34,
+    lineHeight: 40,
     fontWeight: '900',
     letterSpacing: 1,
   },
@@ -320,7 +410,10 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
 
-  /* SECTION */
+
+  /* =========================
+     SEÇÃO
+  ========================= */
 
   section: {
     backgroundColor: 'transparent',
@@ -341,7 +434,10 @@ const styles = StyleSheet.create({
     lineHeight: 21,
   },
 
-  /* IDENTITIES */
+
+  /* =========================
+     IDENTIDADES
+  ========================= */
 
   identityGrid: {
     flexDirection: 'row',
@@ -365,7 +461,7 @@ const styles = StyleSheet.create({
 
   identityOverlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(0, 0, 0, 0.35)',
+    backgroundColor: 'rgba(0, 0, 0, 0.38)',
   },
 
   identityInfo: {
@@ -374,7 +470,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     padding: 14,
-    backgroundColor: 'rgba(0, 0, 0, 0.75)',
+    backgroundColor: 'rgba(0, 0, 0, 0.78)',
   },
 
   identityName: {
@@ -384,13 +480,16 @@ const styles = StyleSheet.create({
   },
 
   identityRole: {
-    color: '#3A9D68',
+    color: '#8FAF45',
     fontSize: 11,
     fontWeight: '700',
     marginTop: 4,
   },
 
-  /* CARD */
+
+  /* =========================
+     CARD
+  ========================= */
 
   card: {
     backgroundColor: '#101010',
@@ -401,7 +500,7 @@ const styles = StyleSheet.create({
   },
 
   cardTitle: {
-    color: '#3A9D68',
+    color: '#8FAF45',
     fontSize: 16,
     fontWeight: '800',
     letterSpacing: 1,
@@ -414,7 +513,10 @@ const styles = StyleSheet.create({
     lineHeight: 24,
   },
 
-  /* FACTS */
+
+  /* =========================
+     FATOS
+  ========================= */
 
   factGrid: {
     flexDirection: 'row',
@@ -450,13 +552,18 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
 
-  /* GOTHAM */
+
+  /* =========================
+     GOTHAM
+  ========================= */
 
   gothamCard: {
     backgroundColor: '#101010',
     borderRadius: 8,
     padding: 20,
     margin: 20,
+    borderTopWidth: 2,
+    borderTopColor: '#8FAF45',
   },
 
   gothamLabel: {
@@ -477,20 +584,23 @@ const styles = StyleSheet.create({
 
   button: {
     marginTop: 15,
-    backgroundColor: '#3A9D68',
+    backgroundColor: '#8FAF45',
     borderRadius: 6,
     paddingVertical: 13,
     alignItems: 'center',
   },
 
   buttonText: {
-    color: '#FFFFFF',
+    color: '#080808',
     fontSize: 13,
     fontWeight: '800',
     letterSpacing: 1,
   },
 
-  /* LEGACY */
+
+  /* =========================
+     LEGADO
+  ========================= */
 
   legacyCard: {
     backgroundColor: '#101010',
@@ -499,7 +609,7 @@ const styles = StyleSheet.create({
   },
 
   legacyTitle: {
-    color: '#3A9D68',
+    color: '#8FAF45',
     fontSize: 16,
     fontWeight: '800',
     letterSpacing: 1,
@@ -510,6 +620,53 @@ const styles = StyleSheet.create({
     color: '#A8A8A8',
     fontSize: 15,
     lineHeight: 24,
+  },
+
+
+  /* =========================
+     RELAÇÃO COM BATMAN
+  ========================= */
+
+  relationCard: {
+    flexDirection: 'row',
+    backgroundColor: '#101010',
+    borderRadius: 8,
+    padding: 18,
+    alignItems: 'flex-start',
+  },
+
+  relationNumber: {
+    width: 38,
+    height: 38,
+    borderRadius: 19,
+    backgroundColor: '#8FAF45',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 14,
+  },
+
+  relationNumberText: {
+    color: '#080808',
+    fontSize: 11,
+    fontWeight: '900',
+  },
+
+  relationContent: {
+    flex: 1,
+  },
+
+  relationTitle: {
+    color: '#FFFFFF',
+    fontSize: 15,
+    fontWeight: '800',
+    letterSpacing: 1,
+    marginBottom: 6,
+  },
+
+  relationText: {
+    color: '#888888',
+    fontSize: 14,
+    lineHeight: 21,
   },
 
 });

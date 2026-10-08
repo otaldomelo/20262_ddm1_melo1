@@ -248,7 +248,6 @@ export default function HomeScreen() {
           das Trevas.
         </ThemedText>
 
-
         <Link
           href="/modal"
           asChild
@@ -281,7 +280,6 @@ export default function HomeScreen() {
           o símbolo do Robin ao lado do Batman.
         </ThemedText>
 
-
         <View style={styles.robinsContainer}>
 
           {/* =====================
@@ -304,7 +302,6 @@ export default function HomeScreen() {
               <ThemedText style={styles.robinRole}>
                 Primeiro Robin
               </ThemedText>
-
 
               <Link
                 href="/dickgrayson"
@@ -347,7 +344,6 @@ export default function HomeScreen() {
                 Segundo Robin
               </ThemedText>
 
-
               <Link
                 href="/jasontodd"
                 asChild
@@ -389,7 +385,6 @@ export default function HomeScreen() {
                 Terceiro Robin
               </ThemedText>
 
-
               <Link
                 href="/timdrake"
                 asChild
@@ -430,6 +425,21 @@ export default function HomeScreen() {
               <ThemedText style={styles.robinRole}>
                 Quarto Robin
               </ThemedText>
+
+              <Link
+                href="/damianwayne"
+                asChild
+              >
+
+                <View style={styles.robinButton}>
+
+                  <ThemedText style={styles.robinButtonText}>
+                    CONHECER DAMIAN →
+                  </ThemedText>
+
+                </View>
+
+              </Link>
 
             </View>
 
