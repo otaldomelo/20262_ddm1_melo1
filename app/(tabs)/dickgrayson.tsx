@@ -22,7 +22,6 @@ export default function HomeScreen() {
   return (
     <ScrollView style={styles.container}>
 
-      {/* CABEÇALHO */}
       <View style={styles.headerContainer}>
         <Image
           source={require('@/assets/images/nightwing_header.jpg')}
@@ -39,7 +38,6 @@ export default function HomeScreen() {
         </View>
       </View>
 
-      {/* TÍTULO */}
       <ThemedView style={styles.titleContainer}>
         <View>
           <ThemedText style={styles.kicker}>
@@ -56,7 +54,6 @@ export default function HomeScreen() {
         </View>
       </ThemedView>
 
-      {/* IDENTIDADES */}
       <ThemedView style={styles.section}>
 
         <ThemedText style={styles.sectionTitle}>
@@ -96,7 +93,6 @@ export default function HomeScreen() {
         </View>
       </ThemedView>
 
-      {/* INTRODUÇÃO */}
       <ThemedView style={styles.card}>
 
         <ThemedText style={styles.cardTitle}>
@@ -112,7 +108,6 @@ export default function HomeScreen() {
 
       </ThemedView>
 
-      {/* NIGHTWING FILES */}
       <ThemedView style={styles.section}>
 
         <ThemedText style={styles.sectionTitle}>
@@ -208,7 +203,6 @@ export default function HomeScreen() {
 
       </ThemedView>
 
-      {/* LEGADO */}
       <ThemedView style={styles.section}>
 
         <ThemedText style={styles.sectionTitle}>
@@ -249,8 +243,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#050505',
   },
 
-  /* HEADER */
-
   headerContainer: {
     width: '100%',
     height: 250,
@@ -284,8 +276,6 @@ const styles = StyleSheet.create({
     letterSpacing: 3,
   },
 
-  /* TITLE */
-
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -317,8 +307,6 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 
-  /* SECTION */
-
   section: {
     backgroundColor: 'transparent',
     padding: 20,
@@ -337,8 +325,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 20,
   },
-
-  /* IDENTITIES */
 
   identityGrid: {
     flexDirection: 'row',
@@ -391,8 +377,6 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 
-  /* CARD */
-
   card: {
     backgroundColor: '#111111',
     borderWidth: 1,
@@ -417,8 +401,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 25,
   },
-
-  /* FACTS */
 
   factGrid: {
     flexDirection: 'row',
@@ -455,8 +437,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginTop: 5,
   },
-
-  /* BLÜDHAVEN */
 
   gothamCard: {
     backgroundColor: '#161616',
@@ -496,8 +476,6 @@ const styles = StyleSheet.create({
     fontWeight: '900',
     letterSpacing: 1,
   },
-
-  /* LEGACY */
 
   legacyCard: {
     backgroundColor: '#111111',

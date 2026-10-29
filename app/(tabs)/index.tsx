@@ -25,10 +25,6 @@ export default function HomeScreen() {
       style={styles.container}
       contentContainerStyle={styles.contentContainer}
     >
-
-      {/* =========================
-          CABEÇALHO
-      ========================= */}
       <View style={styles.headerContainer}>
 
         <Image
@@ -47,10 +43,6 @@ export default function HomeScreen() {
 
       </View>
 
-
-      {/* =========================
-          TÍTULO
-      ========================= */}
       <ThemedView style={styles.titleContainer}>
 
         <View style={styles.titleContent}>
@@ -76,10 +68,6 @@ export default function HomeScreen() {
 
       </ThemedView>
 
-
-      {/* =========================
-          BRUCE WAYNE / BATMAN
-      ========================= */}
       <ThemedView style={styles.section}>
 
         <ThemedText style={styles.sectionTitle}>
@@ -127,10 +115,6 @@ export default function HomeScreen() {
 
       </ThemedView>
 
-
-      {/* =========================
-          INTRODUÇÃO
-      ========================= */}
       <ThemedView style={styles.card}>
 
         <ThemedText style={styles.cardTitle}>
@@ -145,10 +129,6 @@ export default function HomeScreen() {
 
       </ThemedView>
 
-
-      {/* =========================
-          BATMAN FILES
-      ========================= */}
       <ThemedView style={styles.section}>
 
         <ThemedText style={styles.sectionTitle}>
@@ -228,10 +208,6 @@ export default function HomeScreen() {
 
       </ThemedView>
 
-
-      {/* =========================
-          GOTHAM
-      ========================= */}
       <ThemedView style={styles.gothamCard}>
 
         <ThemedText style={styles.gothamLabel}>
@@ -265,10 +241,6 @@ export default function HomeScreen() {
 
       </ThemedView>
 
-
-      {/* =========================
-          ROBINS
-      ========================= */}
       <ThemedView style={styles.section}>
 
         <ThemedText style={styles.sectionTitle}>
@@ -282,9 +254,6 @@ export default function HomeScreen() {
 
         <View style={styles.robinsContainer}>
 
-          {/* =====================
-              DICK GRAYSON
-          ===================== */}
           <View style={styles.robinCard}>
 
             <Image
@@ -322,10 +291,6 @@ export default function HomeScreen() {
 
           </View>
 
-
-          {/* =====================
-              JASON TODD
-          ===================== */}
           <View style={styles.robinCard}>
 
             <Image
@@ -363,10 +328,6 @@ export default function HomeScreen() {
 
           </View>
 
-
-          {/* =====================
-              TIM DRAKE
-          ===================== */}
           <View style={styles.robinCard}>
 
             <Image
@@ -404,10 +365,6 @@ export default function HomeScreen() {
 
           </View>
 
-
-          {/* =====================
-              DAMIAN WAYNE
-          ===================== */}
           <View style={styles.robinCard}>
 
             <Image
@@ -456,9 +413,6 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
 
-  /* =========================
-     CONTAINER
-  ========================= */
 
   container: {
     flex: 1,
@@ -469,10 +423,6 @@ const styles = StyleSheet.create({
     paddingBottom: 40,
   },
 
-
-  /* =========================
-     HEADER
-  ========================= */
 
   headerContainer: {
     width: '100%',
@@ -507,10 +457,6 @@ const styles = StyleSheet.create({
     letterSpacing: 3,
   },
 
-
-  /* =========================
-     TÍTULO
-  ========================= */
 
   titleContainer: {
     flexDirection: 'row',
@@ -548,11 +494,6 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 
-
-  /* =========================
-     SEÇÕES
-  ========================= */
-
   section: {
     backgroundColor: 'transparent',
     padding: 20,
@@ -572,11 +513,6 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     marginBottom: 15,
   },
-
-
-  /* =========================
-     IDENTIDADES
-  ========================= */
 
   identityGrid: {
     flexDirection: 'row',
@@ -629,11 +565,6 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 
-
-  /* =========================
-     CARD
-  ========================= */
-
   card: {
     backgroundColor: '#111111',
     borderWidth: 1,
@@ -658,11 +589,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 25,
   },
-
-
-  /* =========================
-     FATOS
-  ========================= */
 
   factGrid: {
     flexDirection: 'row',
@@ -700,11 +626,6 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
 
-
-  /* =========================
-     GOTHAM
-  ========================= */
-
   gothamCard: {
     backgroundColor: '#161616',
     borderRadius: 4,
@@ -730,11 +651,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
 
-
-  /* =========================
-     BOTÃO GOTHAM
-  ========================= */
-
   button: {
     marginTop: 15,
     backgroundColor: '#F5C518',
@@ -749,11 +665,6 @@ const styles = StyleSheet.create({
     fontWeight: '900',
     letterSpacing: 1,
   },
-
-
-  /* =========================
-     ROBINS
-  ========================= */
 
   robinsContainer: {
     flexDirection: 'row',

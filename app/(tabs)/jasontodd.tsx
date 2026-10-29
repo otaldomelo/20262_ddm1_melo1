@@ -22,7 +22,6 @@ export default function JasonToddScreen() {
   return (
     <ScrollView style={styles.container}>
 
-      {/* CABEÇALHO */}
       <View style={styles.headerContainer}>
         <Image
           source={require('@/assets/images/redhood_header.jpg')}
@@ -39,7 +38,6 @@ export default function JasonToddScreen() {
         </View>
       </View>
 
-      {/* TÍTULO */}
       <ThemedView style={styles.titleContainer}>
         <View>
           <ThemedText style={styles.kicker}>
@@ -56,7 +54,6 @@ export default function JasonToddScreen() {
         </View>
       </ThemedView>
 
-      {/* IDENTIDADES */}
       <ThemedView style={styles.section}>
 
         <ThemedText style={styles.sectionTitle}>
@@ -96,7 +93,6 @@ export default function JasonToddScreen() {
         </View>
       </ThemedView>
 
-      {/* INTRODUÇÃO */}
       <ThemedView style={styles.card}>
 
         <ThemedText style={styles.cardTitle}>
@@ -113,7 +109,6 @@ export default function JasonToddScreen() {
 
       </ThemedView>
 
-      {/* JASON TODD FILES */}
       <ThemedView style={styles.section}>
 
         <ThemedText style={styles.sectionTitle}>
@@ -181,7 +176,6 @@ export default function JasonToddScreen() {
         </View>
       </ThemedView>
 
-      {/* GOTHAM */}
       <ThemedView style={styles.gothamCard}>
 
         <ThemedText style={styles.gothamLabel}>
@@ -209,7 +203,6 @@ export default function JasonToddScreen() {
 
       </ThemedView>
 
-      {/* LEGADO */}
       <ThemedView style={styles.section}>
 
         <ThemedText style={styles.sectionTitle}>
@@ -250,8 +243,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#080808',
   },
 
-  /* HEADER */
-
   headerContainer: {
     width: '100%',
     height: 250,
@@ -285,8 +276,6 @@ const styles = StyleSheet.create({
     letterSpacing: 3,
   },
 
-  /* TITLE */
-
   titleContainer: {
     backgroundColor: 'transparent',
     paddingHorizontal: 20,
@@ -317,8 +306,6 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
 
-  /* SECTION */
-
   section: {
     backgroundColor: 'transparent',
     padding: 20,
@@ -337,8 +324,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 21,
   },
-
-  /* IDENTITIES */
 
   identityGrid: {
     flexDirection: 'row',
@@ -411,8 +396,6 @@ const styles = StyleSheet.create({
     lineHeight: 24,
   },
 
-  /* FACTS */
-
   factGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -446,8 +429,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginTop: 5,
   },
-
-  /* GOTHAM */
 
   gothamCard: {
     backgroundColor: '#101010',
@@ -486,8 +467,6 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     letterSpacing: 1,
   },
-
-  /* LEGACY */
 
   legacyCard: {
     backgroundColor: '#101010',

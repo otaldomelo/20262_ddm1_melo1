@@ -22,7 +22,6 @@ export default function DamianWayneScreen() {
   return (
     <ScrollView style={styles.container}>
 
-      {/* CABEÇALHO */}
       <View style={styles.headerContainer}>
 
         <Image
@@ -41,8 +40,6 @@ export default function DamianWayneScreen() {
 
       </View>
 
-
-      {/* TÍTULO */}
       <ThemedView style={styles.titleContainer}>
 
         <View>
@@ -66,8 +63,6 @@ export default function DamianWayneScreen() {
 
       </ThemedView>
 
-
-      {/* IDENTIDADES */}
       <ThemedView style={styles.section}>
 
         <ThemedText style={styles.sectionTitle}>
@@ -116,8 +111,6 @@ export default function DamianWayneScreen() {
 
       </ThemedView>
 
-
-      {/* INTRODUÇÃO */}
       <ThemedView style={styles.card}>
 
         <ThemedText style={styles.cardTitle}>
@@ -135,8 +128,6 @@ export default function DamianWayneScreen() {
 
       </ThemedView>
 
-
-      {/* DAMIAN WAYNE FILES */}
       <ThemedView style={styles.section}>
 
         <ThemedText style={styles.sectionTitle}>
@@ -216,8 +207,6 @@ export default function DamianWayneScreen() {
 
       </ThemedView>
 
-
-      {/* GOTHAM */}
       <ThemedView style={styles.gothamCard}>
 
         <ThemedText style={styles.gothamLabel}>
@@ -250,8 +239,6 @@ export default function DamianWayneScreen() {
 
       </ThemedView>
 
-
-      {/* LEGADO */}
       <ThemedView style={styles.section}>
 
         <ThemedText style={styles.sectionTitle}>
@@ -283,8 +270,6 @@ export default function DamianWayneScreen() {
 
       </ThemedView>
 
-
-      {/* RELAÇÃO COM BATMAN */}
       <ThemedView style={styles.section}>
 
         <ThemedText style={styles.sectionTitle}>
@@ -328,19 +313,11 @@ export default function DamianWayneScreen() {
 
 const styles = StyleSheet.create({
 
-  /* =========================
-     CONTAINER
-  ========================= */
 
   container: {
     flex: 1,
     backgroundColor: '#080808',
   },
-
-
-  /* =========================
-     HEADER
-  ========================= */
 
   headerContainer: {
     width: '100%',
@@ -375,11 +352,6 @@ const styles = StyleSheet.create({
     letterSpacing: 3,
   },
 
-
-  /* =========================
-     TÍTULO
-  ========================= */
-
   titleContainer: {
     backgroundColor: 'transparent',
     paddingHorizontal: 20,
@@ -410,11 +382,6 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
 
-
-  /* =========================
-     SEÇÃO
-  ========================= */
-
   section: {
     backgroundColor: 'transparent',
     padding: 20,
@@ -433,11 +400,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 21,
   },
-
-
-  /* =========================
-     IDENTIDADES
-  ========================= */
 
   identityGrid: {
     flexDirection: 'row',
@@ -486,11 +448,6 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 
-
-  /* =========================
-     CARD
-  ========================= */
-
   card: {
     backgroundColor: '#101010',
     borderRadius: 8,
@@ -512,11 +469,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     lineHeight: 24,
   },
-
-
-  /* =========================
-     FATOS
-  ========================= */
 
   factGrid: {
     flexDirection: 'row',
@@ -551,11 +503,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginTop: 5,
   },
-
-
-  /* =========================
-     GOTHAM
-  ========================= */
 
   gothamCard: {
     backgroundColor: '#101010',
@@ -597,11 +544,6 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
 
-
-  /* =========================
-     LEGADO
-  ========================= */
-
   legacyCard: {
     backgroundColor: '#101010',
     borderRadius: 8,
@@ -621,11 +563,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     lineHeight: 24,
   },
-
-
-  /* =========================
-     RELAÇÃO COM BATMAN
-  ========================= */
 
   relationCard: {
     flexDirection: 'row',
